@@ -10,10 +10,10 @@ fn main() {
   println!("{}", one_million.pow(2));    //<5>
 
   let forty_twos = [                     //<6>
-    42.0,                                //<7>
+    42.12,                                //<7>
     42f32,                               //<8>
     42.0_f32,                            //<9>
   ];
 
-  println!("{:02}", forty_twos[0]);      //<10>
+  println!("{:02}",forty_twos[0]);      //<10>
 }
