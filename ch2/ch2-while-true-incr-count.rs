@@ -9,4 +9,11 @@ fn main() {
        count += 1;
    }
    println!("{}", count);
+
+   for i in 0..10{
+    println!("{}",i);
+   }
+   for j in 0..=10{
+    println!("{}",j);
+   }
 }
