@@ -2,7 +2,7 @@ fn main() {
   let one             = [1, 2, 3];
   let two: [u8; 3]    = [1, 2, 3];
   let blank1          = [0; 3];
-  let blank2: [u8; 3] = [0; 3];
+  let blank2: [u8; 3] = [0,1, 3];
 
   let arrays = [one, two, blank1, blank2];
 

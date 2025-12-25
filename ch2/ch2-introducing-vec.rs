@@ -11,8 +11,9 @@ What do we seek
 through millions of pages?";
 
   let mut tags: Vec<usize> = vec![];               // <1>
-  let mut ctx: Vec<Vec<(
-               usize, String)>> = vec![];          // <2>
+  // let mut ctx: Vec<Vec<(
+              //  usize, String)>> = vec![];          // <2>
+  let mut ctx = vec![];
 
   for (i, line) in haystack.lines().enumerate() {  // <3>
     if line.contains(needle) {
@@ -47,5 +48,6 @@ through millions of pages?";
       let line_num = i + 1;
       println!("{}: {}", line_num, line);
     }
+    println!();
   }
 }
