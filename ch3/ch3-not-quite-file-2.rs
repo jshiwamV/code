@@ -18,7 +18,7 @@ fn read(
   f: &File,
   save_to: &mut Vec<u8>,
 ) -> usize { // <4>
-  let mut tmp = f.data.clone();   // <5>
+  let mut tmp = f.data.clone();
   let read_length = tmp.len();
 
   save_to.reserve(read_length);   // <6>
