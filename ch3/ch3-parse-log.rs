@@ -8,20 +8,19 @@ enum Event {
 type Message = String;   // <3>
 
 fn parse_log(line: &str) -> (Event, Message) {   // <4>
-  let parts: Vec<_> = line                       // <5>
-                      .splitn(2, ' ')
-                      .collect();                // <6>
-  if parts.len() == 1 {                          // <7>
+
+  let parts: Vec<_> = line.splitn(2,' ').collect();
+  if parts.len()==1{
     return (Event::Unknown, String::from(line))
   }
 
-  let event = parts[0];                // <8>
-  let rest = String::from(parts[1]);   // <8>
+  let event = parts[0];
+  let message = String::from(parts[1]);
 
   match event {
-    "UPDATE" | "update" => (Event::Update, rest),  // <9>
-    "DELETE" | "delete" => (Event::Delete, rest),  // <9>
-    _ => (Event::Unknown, String::from(line)),    // <10>
+    "UPDATE" | "update" => (Event::Update, message),
+    "DELETE" | "delete" => (Event::Delete, message),
+    _ => (Event::Unknown, String::from(line)),
   }
 }
 

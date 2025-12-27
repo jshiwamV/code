@@ -19,8 +19,8 @@ struct File {
 impl Display for FileState {
    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
      match *self {
-         FileState::Open => write!(f, "OPEN"),      // <4>
-         FileState::Closed => write!(f, "CLOSED"),  // <4>
+         FileState::Open => write!(f, "OPEN is called"),      // <4>
+         FileState::Closed => write!(f, "CLOSED is called"),  // <4>
      }
    }
 }
@@ -44,7 +44,10 @@ impl File {
 
 fn main() {
   let f6 = File::new("f6.txt");
+  let fstate = FileState::Open;
   //...
   println!("{:?}", f6);           // <6>
   println!("{}", f6);             // <7>
+  println!("{:?}", fstate);
+  println!("{}", fstate);
 }
