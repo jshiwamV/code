@@ -1,3 +1,4 @@
+#![allow(unused_variables)]
 #[derive(Debug)]   // <1>
 struct CubeSat {
   id: u64,
@@ -9,7 +10,7 @@ enum StatusMessage {
 }
 
 fn check_status(
-  sat_id: CubeSat
+  _sat_id: CubeSat
 ) -> StatusMessage {   // <2>
   StatusMessage::Ok
 }
